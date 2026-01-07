@@ -17,8 +17,8 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:contato@pedrogabriel.dev",
-    label: "contato@pedrogabriel.dev",
+    href: "mailto:pgvenegeroles09@gmail.com",
+    label: "pgvenegeroles09@gmail.com",
   },
 ];
 
@@ -89,9 +89,6 @@ const Contact = () => {
         >
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Pedro Gabriel. Todos os direitos reservados.
-          </p>
-          <p className="text-muted-foreground/50 text-xs mt-2">
-            Desenvolvido com ❤️ e muito café
           </p>
         </motion.div>
       </div>
