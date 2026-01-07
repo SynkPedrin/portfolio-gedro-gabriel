@@ -116,42 +116,16 @@ const Hero = () => {
           
           <motion.h1 
             className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none mb-6"
-            style={{ perspective: 1000 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 1 }}
           >
-            <motion.span 
-              className="block text-foreground"
-              initial="hidden"
-              animate="visible"
-            >
-              {"PEDRO".split("").map((letter, i) => (
-                <motion.span
-                  key={i}
-                  custom={i}
-                  variants={letterVariants}
-                  className="inline-block hover:text-jade transition-colors cursor-default"
-                  whileHover={{ scale: 1.2, y: -5 }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>
-            <motion.span 
-              className="block text-gradient"
-              initial="hidden"
-              animate="visible"
-            >
-              {"GABRIEL".split("").map((letter, i) => (
-                <motion.span
-                  key={i}
-                  custom={i + 5}
-                  variants={letterVariants}
-                  className="inline-block hover:text-white transition-colors cursor-default"
-                  whileHover={{ scale: 1.2, y: -5 }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>
+            <span className="block text-foreground hover:text-jade transition-colors duration-300 cursor-default">
+              PEDRO
+            </span>
+            <span className="block text-gradient hover:text-foreground transition-colors duration-300 cursor-default">
+              GABRIEL
+            </span>
           </motion.h1>
           
           <motion.p 
